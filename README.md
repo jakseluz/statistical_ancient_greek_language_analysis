@@ -88,7 +88,7 @@ The corpus consists of texts from different areas, such as:
             district,
             a ship,
             goodness,
-            measue,
+            measure,
             [...],
             river,
             charge,
