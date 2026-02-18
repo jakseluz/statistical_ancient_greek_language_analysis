@@ -1,12 +1,10 @@
 import zipfile
 import xml.etree.ElementTree as ET
 import time
+import requests
+from urllib.parse import quote
 from word2word import Word2word
 
-start_time = time.time()
-
-text_words = []  # all words from all documents, to be used for NLP analysis in the occurence order
-found_words = dict()  # dictionary to store the count of each word, to be used for statistical analysis and ranking
 w2w = Word2word("el", "en")
 
 
@@ -18,28 +16,96 @@ def translate(word):
         return None
 
 
-# Read the XML files from the zip archive and extract the words and count their occurrences
-with zipfile.ZipFile("./Diorisis.zip") as z:
-    for name in z.namelist():
-        if not name.endswith(".xml"):
-            continue
+def translate_wiki(word) -> list[str] | None:
+    """
+    Translate a Greek word using the Wiktionary API and return a list of definitions. If the word is not found, return None.
 
-        with z.open(name) as xml_file:
-            for event, elem in ET.iterparse(xml_file, events=("end",)):
-                if elem.tag == "word":
+    :param word: The Greek word to translate
+    :type word: str
+    :return: A list of definitions for the given word, or None if the word is not found
+    :rtype: list[str] | None
+    """
+    url = f"https://en.wiktionary.org/api/rest_v1/page/definition/{quote(word)}"
+    headers = {"User-Agent": "StatisticalGreek/1.0 (https://github.com/jakseluz; contact: labuzjak@gmail.com)"}
+    r = requests.get(url, headers=headers)
+    print("Status:", r.status_code)
+    if r.status_code == 200:
+        data = r.json()
+        # print(data)
+        return retrieve_definitions(data["other"][0]["definitions"])
+    return None
 
-                    lemma_elem = elem.find("lemma")
-                    if lemma_elem is not None:
-                        entry = lemma_elem.get("entry")
-                        POS = lemma_elem.get("POS")
-                        if entry is not None:
-                            if entry in found_words:
-                                found_words[entry][1] += 1
-                            else:
-                                found_words[entry] = [POS, 1, translate(entry)]
-                            text_words.append((entry, POS))
-                    elem.clear()
 
+def retrieve_definitions(word_definitions) -> list[str]:
+    """
+    Retrieve the definitions from the Wiktionary API response and clean them by removing any HTML tags.
+
+    :param word_definitions: The list of definitions from the Wiktionary API response
+    :type word_definitions: list[dict]
+    :return: A list of cleaned definitions for the given word
+    :rtype: list[str]
+    """
+    definitions = []
+    for definition in word_definitions:
+        d = definition["definition"]
+        while "<" in d and ">" in d:
+            start = d.find("<")
+            end = d.find(">")
+            if start < end:
+                d = d[:start] + d[end + 1 :]
+            else:
+                break
+        definitions.append(d.strip())
+    return definitions
+
+
+def write_output(filename, data):
+    """
+    Write the given data to a file (by appending) with the specified filename.
+
+    :param filename: The name of the file to write to
+    :param data: The data to write to the file
+    """
+    with open(filename, "a", encoding="utf-8") as f:
+        f.write(data)
+
+
+def parse_xmls() -> tuple[list[tuple[str, str]], dict[str, list]]:
+    """
+    Parse the XML files from the zip archive and extract the words and count their occurrences. Also, translate the words using the translate function.
+
+    :return: A tuple containing a list of (word, POS) tuples and a dictionary of word counts and translations
+    :rtype: tuple[list[tuple[str, str]], dict[str, list]]
+    """
+    text_words = []  # all words from all documents, to be used for NLP analysis in the occurence order
+    found_words = dict()  # dictionary to store the count of each word, to be used for statistical analysis and ranking
+
+    # Read the XML files from the zip archive and extract the words and count their occurrences
+    with zipfile.ZipFile("./Diorisis.zip") as z:
+        for name in z.namelist():
+            if not name.endswith(".xml"):
+                continue
+
+            with z.open(name) as xml_file:
+                for event, elem in ET.iterparse(xml_file, events=("end",)):
+                    if elem.tag == "word":
+
+                        lemma_elem = elem.find("lemma")
+                        if lemma_elem is not None:
+                            entry = lemma_elem.get("entry")
+                            POS = lemma_elem.get("POS")
+                            if entry is not None:
+                                if entry in found_words:
+                                    found_words[entry][1] += 1
+                                else:
+                                    found_words[entry] = [POS, 1, translate(entry)]
+                                text_words.append((entry, POS))
+                        elem.clear()
+    return text_words, found_words
+
+
+start_time = time.time()
+text_words, found_words = parse_xmls()
 part_time = time.time()
 print(f"Time to read and process XML files: {part_time - start_time:.2f} seconds")
 
@@ -55,6 +121,10 @@ words_ranking = [
 part_time = time.time()
 print(f"Time to create words ranking: {part_time - start_time:.2f} seconds")
 
+FILENAME = "word_ranking.txt"
+with open(FILENAME, "w", encoding="utf-8") as f:
+    pass  # clear the file before writing
+
 # Print the top 50 words with their count, rank and product of Zipf's law
 print("\n\nSorted by count:\n")
 i = 1
@@ -62,6 +132,9 @@ for word, count, rank, product, POS, translation in words_ranking:
     if i > 50:
         break
     print(f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS}, translation: {translation})")
+    write_output(
+        FILENAME, f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS}, translation: {translation})\n"
+    )
     i += 1
 part_time = time.time()
 print(f"Time to print top 50 words: {part_time - start_time:.2f} seconds")
@@ -114,7 +187,11 @@ i = 1
 for (word, POS), degree in top_words_by_connections:
     if i > 200:
         break
-    print(f"{i}. {word} (POS: {POS}, translation: {translate(word)}): {degree} connections")
+    print(f"{i}. {word} (POS: {POS}, translation: {translate_wiki(word)}): {degree} connections")
+    write_output(
+        FILENAME,
+        f"{i}. {word} (POS: {POS}, translation: {translate_wiki(word)}): {degree} connections\n",
+    )
     i += 1
 
 print("\n\nTop 50 nouns by number of connections:\n")
@@ -122,7 +199,11 @@ i = 1
 while i <= 50 and top_words_by_connections:
     (word, POS), degree = top_words_by_connections.pop(0)
     if POS == "noun":
-        print(f"{i}. {word} (POS: {POS}, translation: {translate(word)}): {degree} connections")
+        print(f"{i}. {word} (POS: {POS}, translation: {translate_wiki(word)}): {degree} connections")
+        write_output(
+            FILENAME,
+            f"{i}. {word} (POS: {POS}, translation: {translate_wiki(word)}): {degree} connections\n",
+        )
         i += 1
 
 
