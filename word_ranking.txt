@@ -3,7 +3,7 @@
 Number of words used in the research: 10052828
 
 
-Sorted by count:
+Sorted by count - top 50 words with their Zipf's product:
 1. ὁ: 1289135 (rank: 1, product: 1289135, POS: article, translation: None)
 2. καί: 592331 (rank: 2, product: 1184662, POS: conjunction, translation: ['too', 'down', 'They', 'come', 'take'])
 3. δέ: 330497 (rank: 3, product: 991491, POS: particle, translation: ['nobody', 'i', 'until', 'mind', 'wouldn'])

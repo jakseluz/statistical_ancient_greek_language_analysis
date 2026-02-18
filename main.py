@@ -174,8 +174,8 @@ def main():
     print(f"Time to create words ranking: {part_time - start_time:.2f} seconds")
 
     # Print the top 50 words with their count, rank and product of Zipf's law
-    print("\n\nSorted by count:\n")
-    write_output(FILENAME, "\n\nSorted by count:\n")
+    print("\n\nSorted by count - top 50 words with their Zipf's product:\n")
+    write_output(FILENAME, "\n\nSorted by count - top 50 words with their Zipf's product:\n")
     i = 1
     for word, count, rank, product, POS, translation in words_ranking:
         if i > 50:
@@ -188,6 +188,21 @@ def main():
         i += 1
     part_time = time.time()
     print(f"Time to print top 50 words: {part_time - start_time:.2f} seconds")
+
+    # Plot the Zipf's law graph for the top 2000 words
+    ranks = [rank for _, _, rank, _, _, _ in words_ranking[:2000]]
+    counts = [count for _, count, _, _, _, _ in words_ranking[:2000]]
+    plt.figure(figsize=(10, 6))
+    plt.scatter(ranks, counts, alpha=0.5)
+    plt.xscale("log")
+    plt.yscale("log")
+    plt.xlabel("Rank (log scale)")
+    plt.ylabel("Count (log scale)")
+    plt.title("Zipf's Law for Ancient Greek Words")
+    plt.grid(True, which="both", ls="--", lw=0.5)
+    plt.savefig("zipf_plot_for_top_2000.png")
+    part_time = time.time()
+    print(f"Time to plot Zipf's law graph: {part_time - start_time:.2f} seconds")
 
     # create a graph with edges between neighbouring words
     G = create_word_graph(sorted_by_count, 2000, text_words)

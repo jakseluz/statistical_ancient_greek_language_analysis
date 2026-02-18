@@ -20,7 +20,11 @@ The corpus consists of texts from different areas, such as:
 3. Counted the total number of words which is **10_052_828**.
 4. Created a list of them with their rank and Zipf's law product:
 [Zipf's law](https://en.wikipedia.org/wiki/Zipf%27s_law).
-5. pass
+5. Zipf's Law for Ancient Greek words presented as a log-log graph:
+    * ![Zipf's Law for Ancient Greek Words](./zipf_plot_for_top_2000.png "Zipf's Law for Ancient Greek Words")
+    * which is not bad when compared to a wikipedia example:
+    ![Jorge Stolfi - Own work - from Wikipedia, CC BY-SA 4.0](https://en.wikipedia.org/wiki/Zipf%27s_law#/media/File:Zipf-engl-0_English_-_Culpeper_herbal_and_War_of_the_Worlds.svg "Jorge Stolfi - Own work - from Wikipedia, CC BY-SA 4.0")
+    (link: [https://en.wikipedia.org/wiki/Zipf%27s_law#/media/File:Zipf-engl-0_English_-_Culpeper_herbal_and_War_of_the_Worlds.svg](https://en.wikipedia.org/wiki/Zipf%27s_law#/media/File:Zipf-engl-0_English_-_Culpeper_herbal_and_War_of_the_Worlds.svg))
 6. Created a graph of top 2000 words using networkx Python module to draw (if needed) a circular illegible graph presenting connections between words in 'neighbouring' in the corpus.
 7. Retrieved number of connections for each word in the graph and sorted them by the number order.
 8. Listed top 50 nouns by words connections and listed them with their English definitions downloaded from Wiktionary API (using Ancient Greek indices).
