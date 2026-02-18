@@ -1,0 +1,322 @@
+Time to read and process XML files: 80.70 seconds
+Time to sort words by count: 80.76 seconds
+Time to create words ranking: 80.80 seconds
+
+
+Sorted by count:
+
+1. ὁ: 1289135 (rank: 1, product: 1289135, POS: article, translation: None)
+2. καί: 592331 (rank: 2, product: 1184662, POS: conjunction, translation: ['too', 'down', 'They', 'come', 'take'])
+3. δέ: 330497 (rank: 3, product: 991491, POS: particle, translation: ['nobody', 'i', 'until', 'mind', 'wouldn'])
+4. αὐτός: 180763 (rank: 4, product: 723052, POS: pronoun, translation: None)
+5. εἰμί: 169876 (rank: 5, product: 849380, POS: verb, translation: None)
+6. οὗτος: 134037 (rank: 6, product: 804222, POS: pronoun, translation: None)
+7. μέν: 118256 (rank: 7, product: 827792, POS: particle, translation: None)
+8. ἐν: 107907 (rank: 8, product: 863256, POS: preposition, translation: None)
+9. οὐ: 100548 (rank: 9, product: 904932, POS: adverb, translation: None)
+10. ὅς: 88768 (rank: 10, product: 887680, POS: pronoun, translation: None)
+11. γάρ: 87096 (rank: 11, product: 958056, POS: particle, translation: None)
+12. ἐγώ: 84444 (rank: 12, product: 1013328, POS: pronoun, translation: None)
+13. τε: 81476 (rank: 13, product: 1059188, POS: particle, translation: ['Bring', 'em', 'body', 'soul', 'bring'])
+14. εἰς: 80794 (rank: 14, product: 1131116, POS: preposition, translation: None)
+15. τις: 70455 (rank: 15, product: 1056825, POS: pronoun, translation: ['days', ':', 'those', 'other', 'their'])
+16. ἐπί: 67699 (rank: 16, product: 1083184, POS: preposition, translation: None)
+17. πρός: 64527 (rank: 17, product: 1096959, POS: preposition, translation: ['Able', 'Archer', 'Bridge', 'toward', 'headed'])
+18. σύ: 63044 (rank: 18, product: 1134792, POS: pronoun, translation: ['Dude', 'yourself', 'done', 'Who', 'should'])
+19. ὡς: 59073 (rank: 19, product: 1122387, POS: conjunction, translation: None)
+20. πᾶς: 57068 (rank: 20, product: 1141360, POS: adjective, translation: None)
+21. ἀλλά: 56930 (rank: 21, product: 1195530, POS: adverb, translation: None)
+22. ἐκ: 50466 (rank: 22, product: 1110252, POS: preposition, translation: None)
+23. κατά: 50380 (rank: 23, product: 1158740, POS: preposition, translation: ['accidentally', 'serial', 'killer', 'along', 'against'])
+24. ἔχω: 50308 (rank: 24, product: 1207392, POS: verb, translation: None)
+25. γίγνομαι: 50254 (rank: 25, product: 1256350, POS: verb, translation: None)
+26. ἠέ: 50237 (rank: 26, product: 1306162, POS: conjunction, translation: None)
+27. μή: 47554 (rank: 27, product: 1283958, POS: conjunction, translation: ['may', 'keep', 'won', 'Just', 'ever'])
+28. ἄν: 46508 (rank: 28, product: 1302224, POS: particle, translation: None)
+29. περί: 45906 (rank: 29, product: 1331274, POS: preposition, translation: ['Act', 'crap', 'stuff', 'law', 'whole'])
+30. λέγω: 41757 (rank: 30, product: 1252710, POS: verb, translation: ['Verily', 'unto', 'verily', 'speak', 'shall'])
+31. ὅστις: 41320 (rank: 31, product: 1280920, POS: pronoun, translation: None)
+32. ἄλλος: 41206 (rank: 32, product: 1318592, POS: adjective, translation: None)
+33. πολύς: 40651 (rank: 33, product: 1341483, POS: adjective, translation: ['plenty', 'Too', 'Been', 'many', 'room'])
+34. εἰ: 38869 (rank: 34, product: 1321546, POS: conjunction, translation: None)
+35. διά: 38242 (rank: 35, product: 1338470, POS: preposition, translation: ['divided', 'hereby', 'sentence', 'Majesty', 'force'])
+36. ποιέω: 36210 (rank: 36, product: 1303560, POS: verb, translation: None)
+37. τίς: 34517 (rank: 37, product: 1277129, POS: pronoun, translation: ['women', 'days', 'give', 'those', 'their'])
+38. φημί: 32869 (rank: 38, product: 1249022, POS: verb, translation: None)
+39. ὑπό: 31331 (rank: 39, product: 1221909, POS: preposition, translation: None)
+40. ἕ: 30591 (rank: 40, product: 1223640, POS: pronoun, translation: None)
+41. οὖν: 29979 (rank: 41, product: 1229139, POS: particle, translation: None)
+42. ἀπό: 28898 (rank: 42, product: 1213716, POS: preposition, translation: None)
+43. πόλις: 28341 (rank: 43, product: 1218663, POS: adjective, translation: ['Bayan', 'township', 'hind', 'frightened', 'vested'])
+44. ἐκεῖνος: 28142 (rank: 44, product: 1238248, POS: pronoun, translation: None)
+45. παρά: 27352 (rank: 45, product: 1230840, POS: preposition, translation: ['despite', 'Better', 'rather', 'against', 'die'])
+46. ἑαυτοῦ: 26532 (rank: 46, product: 1220472, POS: pronoun, translation: None)
+47. οὐδέ: 26097 (rank: 47, product: 1226559, POS: particle, translation: None)
+48. μετά: 25101 (rank: 48, product: 1204848, POS: preposition, translation: ['later', 'next', 'Then', 'after', 'first'])
+49. δή: 24900 (rank: 49, product: 1220100, POS: particle, translation: ['Dandy', 'excited', 'partner', 'Never', 'guess'])
+50. πρότερος: 24619 (rank: 50, product: 1230950, POS: adjective, translation: None)
+Time to print top 50 words: 80.80 seconds
+
+Time to get first 2000 words: 81.83 seconds
+Time to add nodes to graph: 81.84 seconds
+Time to add edges to graph: 95.86 seconds
+
+
+Top 200 words by number of connections:
+
+1. ὁ (POS: article, translation: None): 2135337 connections
+2. καί (POS: conjunction, translation: ['too', 'down', 'They', 'come', 'take']): 924399 connections
+3. δέ (POS: particle, translation: ['nobody', 'i', 'until', 'mind', 'wouldn']): 567349 connections
+4. αὐτός (POS: pronoun, translation: None): 315062 connections
+5. εἰμί (POS: verb, translation: None): 294224 connections
+6. οὗτος (POS: pronoun, translation: None): 240485 connections
+7. μέν (POS: particle, translation: None): 211553 connections
+8. ἐν (POS: preposition, translation: None): 181713 connections
+9. οὐ (POS: adverb, translation: None): 174107 connections
+10. γάρ (POS: particle, translation: None): 157705 connections
+11. ὅς (POS: pronoun, translation: None): 154472 connections
+12. ἐγώ (POS: pronoun, translation: None): 149600 connections
+13. εἰς (POS: preposition, translation: None): 133611 connections
+14. τε (POS: particle, translation: ['Bring', 'em', 'body', 'soul', 'bring']): 132014 connections
+15. τις (POS: pronoun, translation: ['days', ':', 'those', 'other', 'their']): 122622 connections
+16. ἐπί (POS: preposition, translation: None): 116988 connections
+17. πρός (POS: preposition, translation: ['Able', 'Archer', 'Bridge', 'toward', 'headed']): 114498 connections
+18. σύ (POS: pronoun, translation: ['Dude', 'yourself', 'done', 'Who', 'should']): 111746 connections
+19. πᾶς (POS: adjective, translation: None): 100682 connections
+20. ὡς (POS: conjunction, translation: None): 99897 connections
+21. ἀλλά (POS: adverb, translation: None): 96310 connections
+22. κατά (POS: preposition, translation: ['accidentally', 'serial', 'killer', 'along', 'against']): 89522 connections
+23. ἐκ (POS: preposition, translation: None): 86366 connections
+24. ἄν (POS: particle, translation: None): 85897 connections
+25. γίγνομαι (POS: verb, translation: None): 85451 connections
+26. ἔχω (POS: verb, translation: None): 85109 connections
+27. μή (POS: conjunction, translation: ['may', 'keep', 'won', 'Just', 'ever']): 83226 connections
+28. περί (POS: preposition, translation: ['Act', 'crap', 'stuff', 'law', 'whole']): 82328 connections
+29. ἠέ (POS: conjunction, translation: None): 79970 connections
+30. ἄλλος (POS: adjective, translation: None): 74828 connections
+31. λέγω (POS: verb, translation: ['Verily', 'unto', 'verily', 'speak', 'shall']): 74489 connections
+32. ὅστις (POS: pronoun, translation: None): 73641 connections
+33. πολύς (POS: adjective, translation: ['plenty', 'Too', 'Been', 'many', 'room']): 71269 connections
+34. εἰ (POS: conjunction, translation: None): 70368 connections
+35. διά (POS: preposition, translation: ['divided', 'hereby', 'sentence', 'Majesty', 'force']): 67200 connections
+36. ποιέω (POS: verb, translation: None): 63178 connections
+37. τίς (POS: pronoun, translation: ['women', 'days', 'give', 'those', 'their']): 62244 connections
+38. φημί (POS: verb, translation: None): 56708 connections
+39. οὖν (POS: particle, translation: None): 55795 connections
+40. ὑπό (POS: preposition, translation: None): 53241 connections
+41. ἕ (POS: pronoun, translation: None): 53204 connections
+42. πόλις (POS: adjective, translation: ['Bayan', 'township', 'hind', 'frightened', 'vested']): 50486 connections
+43. ἐκεῖνος (POS: pronoun, translation: None): 50426 connections
+44. ἀπό (POS: preposition, translation: None): 49919 connections
+45. παρά (POS: preposition, translation: ['despite', 'Better', 'rather', 'against', 'die']): 48726 connections
+46. ἑαυτοῦ (POS: pronoun, translation: None): 47079 connections
+47. δή (POS: particle, translation: ['Dandy', 'excited', 'partner', 'Never', 'guess']): 46512 connections
+48. πρότερος (POS: adjective, translation: None): 44311 connections
+49. λόγος (POS: noun, translation: ['speech', 'word', 'point', 'reason', 'cause']): 43595 connections
+50. μετά (POS: preposition, translation: ['later', 'next', 'Then', 'after', 'first']): 43500 connections
+51. οὐδέ (POS: particle, translation: None): 42438 connections
+52. οὐδείς (POS: pronoun, translation: None): 41796 connections
+53. μέγας (POS: adverb, translation: ['Grand', 'mighty', 'grand', 'Great', 'master']): 41510 connections
+54. εἶπον (POS: verb, translation: None): 39893 connections
+55. γε (POS: particle, translation: ['Turk', 'Clementine', 'fuse', 'cafe', 'ruining']): 39656 connections
+56. οὕτως (POS: adverb, translation: None): 38946 connections
+57. ἀνήρ (POS: noun, translation: None): 37453 connections
+58. θεός (POS: noun, translation: ['god', 'Lord', 'bless', 'world', 'God']): 36662 connections
+59. τοιοῦτος (POS: adjective, translation: None): 30048 connections
+60. οὔτε (POS: adverb, translation: None): 29993 connections
+61. ἄνθρωπος (POS: noun, translation: None): 29293 connections
+62. δοκέω (POS: verb, translation: None): 27834 connections
+63. νῦν (POS: adverb, translation: None): 27550 connections
+64. μόνος (POS: adjective, translation: ['himself', 'alone', 'myself', 'yourself', 'reason']): 26953 connections
+65. λαμβάνω (POS: verb, translation: ['Copy', 'receiving', 'copy', 'messages', 'receive']): 26830 connections
+66. ὅσος (POS: adjective, translation: None): 26661 connections
+67. εἷς (POS: adjective, translation: None): 26028 connections
+68. ἐπεί (POS: conjunction, translation: None): 25718 connections
+69. βασιλεύς (POS: noun, translation: None): 25627 connections
+70. ἔτι (POS: adverb, translation: None): 25414 connections
+71. δίδωμι (POS: verb, translation: None): 25316 connections
+72. ὦ (POS: interjection, translation: None): 25085 connections
+73. ἕτερος (POS: adjective, translation: None): 25043 connections
+74. ὅδε (POS: pronoun, translation: None): 24433 connections
+75. δέομαι (POS: verb, translation: None): 24234 connections
+76. ὥστε (POS: conjunction, translation: None): 22229 connections
+77. οἷος (POS: adjective, translation: None): 22178 connections
+78. ἅπας (POS: adjective, translation: None): 21855 connections
+79. ἐάν (POS: conjunction, translation: None): 21720 connections
+80. ὥσπερ (POS: adverb, translation: None): 21664 connections
+81. ἕκαστος (POS: adjective, translation: None): 21180 connections
+82. ἀρχή (POS: noun, translation: None): 21083 connections
+83. βούλομαι (POS: verb, translation: None): 20964 connections
+84. οἶδα (POS: verb, translation: None): 20340 connections
+85. γῆ (POS: noun, translation: None): 20319 connections
+86. μᾶλλον (POS: adverb, translation: None): 20266 connections
+87. καλέω (POS: verb, translation: None): 19844 connections
+88. ὑπέρ (POS: preposition, translation: None): 19780 connections
+89. ἀγαθός (POS: adjective, translation: None): 19620 connections
+90. καλός (POS: noun, translation: ['nice', 'pretty', 'person', 'great', 'kind']): 19589 connections
+91. ὁράω (POS: verb, translation: None): 19242 connections
+92. κακός (POS: adjective, translation: ['villain', 'evil', 'such', 'bad', 'person']): 18984 connections
+93. ἡμέρα (POS: noun, translation: None): 18912 connections
+94. δύναμις (POS: adjective, translation: ['Thine', 'rebirth', 'awe', 'kneel', 'thine']): 18643 connections
+95. χρόνος (POS: noun, translation: ['clock', 'Time', 'year', 'running', 'enough']): 18327 connections
+96. δύναμαι (POS: verb, translation: ['reopen', 'formal', 'Him', 'duties', 'enjoyed']): 18183 connections
+97. μηδείς (POS: pronoun, translation: None): 18108 connections
+98. πατήρ (POS: noun, translation: ['Father', 'Grau', 'Stevens', 'tony', 'Pascal']): 17940 connections
+99. υἱός (POS: noun, translation: None): 17802 connections
+100. ἤδη (POS: adverb, translation: None): 17732 connections
+101. γυνή (POS: noun, translation: None): 17560 connections
+102. πράσσω (POS: verb, translation: None): 17514 connections
+103. μάλιστα (POS: adverb, translation: ['fact', 'yes', 'actually', 'yeah', 'talking']): 17204 connections
+104. ἄρα (POS: particle, translation: None): 16523 connections
+105. παῖς (POS: adjective, translation: None): 16520 connections
+106. ἔρχομαι (POS: verb, translation: None): 16343 connections
+107. τότε (POS: adverb, translation: ['Since', 'since', 'Then', 'well', 'ever']): 16342 connections
+108. σῶμα (POS: adjective, translation: None): 16258 connections
+109. φέρω (POS: verb, translation: ['fetch', 'bringing', 'coffee', 'bring', 'drink']): 16008 connections
+110. νόμος (POS: noun, translation: ['Law', 'law', 'laws', 'rule', 'order']): 16000 connections
+111. ἔργον (POS: noun, translation: None): 15856 connections
+112. πόλεμος (POS: noun, translation: ['War', 'war', 'against', 'between', 'isn']): 15837 connections
+113. οἴομαι (POS: verb, translation: None): 15822 connections
+114. δέω (POS: verb, translation: None): 15263 connections
+115. πρᾶγμα (POS: noun, translation: None): 15153 connections
+116. ἀίω (POS: verb, translation: None): 15075 connections
+117. ἀκούω (POS: verb, translation: None): 15057 connections
+118. φίλος (POS: adjective, translation: ['pal', 'buddy', 'boyfriend', 'yours', 'mine']): 14733 connections
+119. πάρειμι (POS: verb, translation: None): 14617 connections
+120. φαίνω (POS: verb, translation: None): 14498 connections
+121. φύσις (POS: noun, translation: ['Rough', 'distinction', 'denies', 'valid', 'fascinating']): 14498 connections
+122. δίκαιος (POS: adjective, translation: ['fair', 'righteous', 'justice', 'honest', 'cause']): 14400 connections
+123. ψυχή (POS: noun, translation: ['soul', 'souls', 'mate', 'spirit', 'rest']): 14298 connections
+124. ὄνομα (POS: adjective, translation: None): 14154 connections
+125. ὅλος (POS: adjective, translation: None): 14029 connections
+126. χείρ (POS: noun, translation: None): 13923 connections
+127. κύριος (POS: adjective, translation: ['mister', 'gentleman', 'Monsieur', 'main', 'master']): 13903 connections
+128. δύο (POS: adjective, translation: ['Both', 'twice', '2', 'Two', 'couple']): 13595 connections
+129. ἵνα (POS: conjunction, translation: None): 13575 connections
+130. ἄρχω (POS: verb, translation: None): 13412 connections
+131. εἶδον (POS: verb, translation: None): 13379 connections
+132. ἅμα (POS: adverb, translation: None): 13271 connections
+133. ὅμοιος (POS: adjective, translation: None): 13219 connections
+134. ἄγω (POS: verb, translation: None): 12925 connections
+135. πῶς (POS: adverb, translation: None): 12851 connections
+136. πολέμιος (POS: adjective, translation: ['opponent', 'TIMES', 'AGAIN', 'THOSE', 'openly']): 12734 connections
+137. τυγχάνω (POS: verb, translation: None): 12730 connections
+138. τοσοῦτος (POS: adjective, translation: None): 12704 connections
+139. μηδέ (POS: particle, translation: None): 12634 connections
+140. σφεῖς (POS: pronoun, translation: None): 12464 connections
+141. ἀλλήλων (POS: pronoun, translation: None): 12426 connections
+142. χώρα (POS: noun, translation: ['across', 'land', 'country', 'whole', 'In']): 12346 connections
+143. πάλιν (POS: adverb, translation: None): 12136 connections
+144. μήτε (POS: particle, translation: ['ted', 'n', 'chains', 'friendly', 'nor']): 12055 connections
+145. ἀεί (POS: adverb, translation: None): 11948 connections
+146. πλῆθος (POS: noun, translation: None): 11872 connections
+147. ὅταν (POS: conjunction, translation: None): 11869 connections
+148. ἐθέλω (POS: verb, translation: None): 11803 connections
+149. ὀλίγος (POS: adjective, translation: None): 11692 connections
+150. Ἕλλην (POS: proper, translation: None): 11667 connections
+151. πάσχω (POS: verb, translation: None): 11646 connections
+152. ποτέ (POS: particle, translation: ['Never', 'Have', 'seen', 'ever', 'again']): 11576 connections
+153. ὑπάρχω (POS: verb, translation: None): 11489 connections
+154. τρόπος (POS: noun, translation: ['another', 'Is', 'best', 'better', 'any']): 11474 connections
+155. ἴσος (POS: adjective, translation: None): 11468 connections
+156. γιγνώσκω (POS: verb, translation: None): 11454 connections
+157. γράφω (POS: verb, translation: ['writing', 'write', 'letters', 'letter', 'started']): 11393 connections
+158. μικρός (POS: adjective, translation: ['Little', 'small', 'young', 'kid', 'boy']): 11381 connections
+159. ἔοικα (POS: verb, translation: None): 11349 connections
+160. νομίζω (POS: verb, translation: ['guess', 'believe', 'much', 'too', 'any']): 11188 connections
+161. μέλλω (POS: verb, translation: None): 11166 connections
+162. συμβαίνω (POS: verb, translation: None): 11055 connections
+163. θάλασσα (POS: noun, translation: ['sea', 'overboard', 'Sea', 'messed', 'screw']): 11054 connections
+164. μήν (POS: particle, translation: ['worry', 'Please', 'hope', 'may', 'doesn']): 11046 connections
+165. μέσος (POS: adjective, translation: ['average', 'Average', 'quarterback', 'batting', 'per']): 10965 connections
+166. ὅπως (POS: conjunction, translation: None): 10645 connections
+167. χράομαι (POS: verb, translation: None): 10627 connections
+168. πείθω (POS: verb, translation: None): 10530 connections
+169. ἴδιος (POS: adjective, translation: None): 10449 connections
+170. ἀληθής (POS: adjective, translation: None): 10374 connections
+171. τόπος (POS: noun, translation: ['site', 'land', 'country', '♪', 'isn']): 10237 connections
+172. τίθημι (POS: verb, translation: None): 10139 connections
+173. μέρος (POS: noun, translation: ['side', 'part', 'place', 'find', 'where']): 10061 connections
+174. εὑρίσκω (POS: verb, translation: None): 10051 connections
+175. χρῆμα (POS: adjective, translation: None): 10010 connections
+176. κοινός (POS: adjective, translation: ['common', 'denominator', 'commoner', 'mutual', 'shared']): 10004 connections
+177. ἄξιος (POS: adjective, translation: None): 9852 connections
+178. δῆμος (POS: noun, translation: None): 9764 connections
+179. πλεῖστος (POS: adjective, translation: None): 9726 connections
+180. χρή (POS: verb, translation: None): 9674 connections
+181. βίος (POS: adjective, translation: ['treating', 'bliss', 'marital', 'wedded', 'cracked']): 9529 connections
+182. κελεύω (POS: verb, translation: None): 9502 connections
+183. λοιπός (POS: adjective, translation: ['Me', 'rest', 'sir', 'ready', 'cause']): 9471 connections
+184. ναῦς (POS: noun, translation: None): 9435 connections
+185. σύν (POS: preposition, translation: ['plus', 'eatin', 'jacked', 'payments', 'mortgage']): 9324 connections
+186. ἀρετή (POS: noun, translation: None): 9144 connections
+187. καθίστημι (POS: verb, translation: None): 9068 connections
+188. παρέχω (POS: verb, translation: ['provide', 'providing', 'supply', 'support', 'offer']): 9018 connections
+189. φεύγω (POS: verb, translation: ['leaving', 'walk', 'gone', 'tomorrow', 'getting']): 8988 connections
+190. καιρός (POS: noun, translation: ['weather', 'Long', 'Been', 'while', 'ago']): 8984 connections
+191. αἱρέω (POS: verb, translation: None): 8943 connections
+192. πού (POS: adverb, translation: ['knows', 'idea', 'Do', 'Where', 'where']): 8917 connections
+193. ζάω (POS: verb, translation: None): 8911 connections
+194. γένος (POS: noun, translation: ['gender', 'nee', 'née', 'maiden', 'mankind']): 8907 connections
+195. Ζεύς (POS: proper, translation: None): 8808 connections
+196. κῦρος (POS: noun, translation: None): 8743 connections
+197. ἐναντίος (POS: adjective, translation: None): 8737 connections
+198. πρό (POS: preposition, translation: ['upgraded', 'Parliament', 'potent', 'Caesar', 'Board']): 8683 connections
+199. τοίνυν (POS: particle, translation: None): 8675 connections
+200. ἀνάγκη (POS: noun, translation: None): 8644 connections
+
+
+Top 50 nouns by number of connections:
+
+1. λόγος (POS: noun, translation: ['speech', 'word', 'point', 'reason', 'cause']): 43595 connections
+2. ἀνήρ (POS: noun, translation: None): 37453 connections
+3. θεός (POS: noun, translation: ['god', 'Lord', 'bless', 'world', 'God']): 36662 connections
+4. ἄνθρωπος (POS: noun, translation: None): 29293 connections
+5. βασιλεύς (POS: noun, translation: None): 25627 connections
+6. ἀρχή (POS: noun, translation: None): 21083 connections
+7. γῆ (POS: noun, translation: None): 20319 connections
+8. καλός (POS: noun, translation: ['nice', 'pretty', 'person', 'great', 'kind']): 19589 connections
+9. ἡμέρα (POS: noun, translation: None): 18912 connections
+10. χρόνος (POS: noun, translation: ['clock', 'Time', 'year', 'running', 'enough']): 18327 connections
+11. πατήρ (POS: noun, translation: ['Father', 'Grau', 'Stevens', 'tony', 'Pascal']): 17940 connections
+12. υἱός (POS: noun, translation: None): 17802 connections
+13. γυνή (POS: noun, translation: None): 17560 connections
+14. νόμος (POS: noun, translation: ['Law', 'law', 'laws', 'rule', 'order']): 16000 connections
+15. ἔργον (POS: noun, translation: None): 15856 connections
+16. πόλεμος (POS: noun, translation: ['War', 'war', 'against', 'between', 'isn']): 15837 connections
+17. πρᾶγμα (POS: noun, translation: None): 15153 connections
+18. φύσις (POS: noun, translation: ['Rough', 'distinction', 'denies', 'valid', 'fascinating']): 14498 connections
+19. ψυχή (POS: noun, translation: ['soul', 'souls', 'mate', 'spirit', 'rest']): 14298 connections
+20. χείρ (POS: noun, translation: None): 13923 connections
+21. χώρα (POS: noun, translation: ['across', 'land', 'country', 'whole', 'In']): 12346 connections
+22. πλῆθος (POS: noun, translation: None): 11872 connections
+23. τρόπος (POS: noun, translation: ['another', 'Is', 'best', 'better', 'any']): 11474 connections
+24. θάλασσα (POS: noun, translation: ['sea', 'overboard', 'Sea', 'messed', 'screw']): 11054 connections
+25. τόπος (POS: noun, translation: ['site', 'land', 'country', '♪', 'isn']): 10237 connections
+26. μέρος (POS: noun, translation: ['side', 'part', 'place', 'find', 'where']): 10061 connections
+27. δῆμος (POS: noun, translation: None): 9764 connections
+28. ναῦς (POS: noun, translation: None): 9435 connections
+29. ἀρετή (POS: noun, translation: None): 9144 connections
+30. καιρός (POS: noun, translation: ['weather', 'Long', 'Been', 'while', 'ago']): 8984 connections
+31. γένος (POS: noun, translation: ['gender', 'nee', 'née', 'maiden', 'mankind']): 8907 connections
+32. κῦρος (POS: noun, translation: None): 8743 connections
+33. ἀνάγκη (POS: noun, translation: None): 8644 connections
+34. δόξα (POS: noun, translation: ['glory', 'fame', 'Glory', 'credit', 'honor']): 8509 connections
+35. θέα (POS: noun, translation: ['view', 'overlooking', 'views', 'plain', 'sight']): 8421 connections
+36. μάχη (POS: noun, translation: ['battle', 'Battle', 'combat', 'fighting', 'fight']): 8351 connections
+37. ἵππος (POS: noun, translation: None): 8172 connections
+38. ποταμός (POS: noun, translation: ['river', 'River', 'flows', 'flowing', 'flow']): 8010 connections
+39. αἰτία (POS: noun, translation: None): 8004 connections
+40. ὕδωρ (POS: noun, translation: None): 7942 connections
+41. στρατηγός (POS: noun, translation: ['general', 'General', 'army', 'sir', 'says']): 7789 connections
+42. χάρις (POS: noun, translation: ['dwell', 'Surely', 'grace', 'thanks', 'goodness']): 7584 connections
+43. οἶκος (POS: noun, translation: None): 7578 connections
+44. τέλος (POS: noun, translation: ['ending', 'finally', 'At', 'anyway', 'end']): 7030 connections
+45. μήτηρ (POS: noun, translation: None): 6966 connections
+46. ναός (POS: noun, translation: ['temple', 'cathedral', 'Temple', 'shrine', 'sanctuary']): 6698 connections
+47. γνώμη (POS: noun, translation: ['opinion', 'ask', 'In', 'mind', 'changed']): 6686 connections
+48. τεῖχος (POS: noun, translation: None): 6546 connections
+49. πολίτης (POS: noun, translation: ['citizen', 'civilian', 'upstanding', 'Citizen', 'concerned']): 6299 connections
+50. πῦρ (POS: noun, translation: None): 6248 connections
+
+Execution time: 96.09 seconds
