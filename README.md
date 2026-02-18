@@ -95,6 +95,7 @@ The corpus consists of texts from different areas, such as:
             a wall,
             citizen,
             a fire.
+    
     As it appears, our corpus - although enormous (over 10 million of words in total) - have more abstract words in its Swadesh list than the original Swadesh list. This can mean that the corpus is not easily understandable for an average speaker who knows only the language's core words.
 
 ## Project structure
