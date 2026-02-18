@@ -259,6 +259,9 @@ Top 200 words by number of connections:
 200. ἀνάγκη (POS: noun, translation: ['force', 'constraint', 'necessity']): 8644 connections
 
 
+The number of words that make up 90% of the corpus is equal to 3306.
+
+
 Top 50 nouns by number of connections:
 1. λόγος (POS: noun, translation: ['that which is said: word, sentence, speech, story, debate, utterance, argument', 'that which is thought: idea, conception, consideration, reason, reckoning, computation', 'an account, explanation, or narrative', 'subject matter', 'the word or wisdom of God, identified with Jesus in the New Testament, by whom the world was created; God the Son']): 43595 connections
 2. ἀνήρ (POS: noun, translation: ['man (adult male)', 'husband', 'human being; a mortal (as opposed to a god)']): 37453 connections

@@ -108,9 +108,9 @@ def create_word_graph(sorted_words, number_of_words, text_words) -> nx.Graph:
     :return: A graph with edges between neighbouring words in the text, where only the top `number_of_words` most frequent words are included as nodes
     :rtype: nx.Graph
     """
-    first_2000_words = sorted_words[:number_of_words]
+    first_words = sorted_words[:number_of_words]
     G = nx.Graph()
-    G.add_nodes_from([(word, POS) for word, (POS, _) in first_2000_words])
+    G.add_nodes_from([(word, POS) for word, (POS, _) in first_words])
     for i in range(len(text_words) - 1):
         word1 = text_words[i]
         word2 = text_words[i + 1]
@@ -187,7 +187,7 @@ def main():
     # create a graph with edges between neighbouring words
     G = create_word_graph(sorted_by_count, 2000, text_words)
     part_time = time.time()
-    print(f"Time to add edges to graph: {part_time - start_time:.2f} seconds")
+    print(f"Time to create word graph: {part_time - start_time:.2f} seconds")
 
     # optionally: draw the graph (this can be very slow for large graphs and illegible, so it's commented out by default)
 
@@ -222,6 +222,25 @@ def main():
             f"{i}. {word} (POS: {POS}, translation: {translate_wiki(word)}): {degree} connections\n",
         )
         i += 1
+    part_time = time.time()
+    print(f"Time to print top 200 words by connections: {part_time - start_time:.2f} seconds")
+
+    # Check the core of the language (we shall find the number of words that make up 90% of the corpus)
+    ALL = create_word_graph(sorted_by_count, len(sorted_by_count), text_words)
+    all_words_by_connections = sorted(ALL.degree(weight="weight"), key=lambda x: x[1], reverse=True)
+    total_words = len(text_words)
+    barrier = total_words * 0.9
+    cumulative_sum = 0
+    i = 0
+    for (word, POS), degree in all_words_by_connections:
+        cumulative_sum += found_words[word][1]
+        i += 1
+        if cumulative_sum >= barrier:
+            print(f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\n")
+            write_output(FILENAME, f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\n")
+            break
+    part_time = time.time()
+    print(f"Time to calculate core of the language: {part_time - start_time:.2f} seconds")
 
     # Analyze the graph to find the most connected nouns (by degree) and print the top 50 of them with their English definitions from Wiktionary
     print("\n\nTop 50 nouns by number of connections:\n")
