@@ -260,6 +260,7 @@ Top 200 words by number of connections:
 
 
 The number of words that make up 90% of the corpus is equal to 3306.
+Total words in corpus: 10052828, cumulative sum: 9047686, barrier (90% of total): 9047545.200000001
 
 
 Top 50 nouns by number of connections:

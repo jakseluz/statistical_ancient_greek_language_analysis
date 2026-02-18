@@ -236,8 +236,13 @@ def main():
         cumulative_sum += found_words[word][1]
         i += 1
         if cumulative_sum >= barrier:
-            print(f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\n")
-            write_output(FILENAME, f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\n")
+            print(
+                f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\nTotal words in corpus: {total_words}, cumulative sum: {cumulative_sum}, barrier (90% of total): {barrier}\n"
+            )
+            write_output(
+                FILENAME,
+                f"\n\nThe number of words that make up 90% of the corpus is equal to {i}.\nTotal words in corpus: {total_words}, cumulative sum: {cumulative_sum}, barrier (90% of total): {barrier}\n",
+            )
             break
     part_time = time.time()
     print(f"Time to calculate core of the language: {part_time - start_time:.2f} seconds")
