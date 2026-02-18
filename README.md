@@ -3,7 +3,7 @@
 ### The goal of the project was to analyse a sample Ancient Greek language words corpus.
 
 The corpus consists of texts from different areas, such as:
-* The Bible: New Testament and Septuagint
+* The Bible: New Testament and Septuagint (Old Testament Greek translation)
 * Greek philosophy (e.g. Aristotle)
 * Greek poetry (e.g. Homer)
 * historians work (e.g. Flavius)
@@ -17,15 +17,15 @@ The corpus consists of texts from different areas, such as:
     * [more](https://brill.com/view/journals/rdj/3/1/article-p55_55.xml?ebody=full%20html-copy1#d58954549e659) about it.
 2. Parsed the XML files using zipfile and xml.etree Python modules to get info about occurences and neighbourhood of the words.
 2. Sorted it by their count.
-3. Counted the total number of words which is 10_052_828.
+3. Counted the total number of words which is **10_052_828**.
 4. Created a list of them with their rank and Zipf's law product:
-[Zipf's law](https://en.wikipedia.org/wiki/Zipf%27s_law)
+[Zipf's law](https://en.wikipedia.org/wiki/Zipf%27s_law).
 5. pass
 6. Created a graph of top 2000 words using networkx Python module to draw (if needed) a circular illegible graph presenting connections between words in 'neighbouring' in the corpus.
 7. Retrieved number of connections for each word in the graph and sorted them by the number order.
 8. Listed top 50 nouns by words connections and listed them with their English definitions downloaded from Wiktionary API (using Ancient Greek indices).
 9. Compared them with the [Swadesh list](https://en.wikipedia.org/wiki/Swadesh_list).
-    * [original Swadesh list from wikipedia](./swadesh_list_50_wikipedia.txt)
+    * [a file with the original Swadesh list from wikipedia](./swadesh_list_50_wikipedia.txt)
         * sample words by random:
             I,
             you,
@@ -56,7 +56,7 @@ The corpus consists of texts from different areas, such as:
             nose,
             mouth,
             tooth...
-    * ['Swadesh list' from the corpus](./our_swadesh_list.txt)
+    * [a file with our 'Swadesh list' from the corpus](./our_swadesh_list.txt)
         * sample words by random:
             word,
             man,
@@ -96,7 +96,7 @@ The corpus consists of texts from different areas, such as:
             citizen,
             a fire.
     
-    As it appears, our corpus - although enormous (over 10 million of words in total) - have more abstract words in its Swadesh list than the original Swadesh list. This can mean that the corpus is not easily understandable for an average speaker who knows only the language's core words.
+    As it appears, our corpus - although enormous (**over 10 million of words in total** - about 180 MB of data) - have more abstract words in its Swadesh list than the original Swadesh list. This can mean that the corpus is not easily understandable for an average speaker who knows only the language's core words.
 
 ## Project structure
 ```
