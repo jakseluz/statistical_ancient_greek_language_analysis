@@ -3,29 +3,10 @@ import xml.etree.ElementTree as ET
 import time
 import requests
 from urllib.parse import quote
-from word2word import Word2word
 import networkx as nx
 import matplotlib.pyplot as plt
 
-w2w = Word2word("el", "en")  # initialize the Word2word translator for Greek to English translation
 FILENAME = "word_ranking.txt"  # file to write the output to
-
-
-def translate(word) -> str | None:
-    """
-    Translate a Greek word to English using the Word2word library. If the translation fails, return None.
-    Test, for more adequate translation, the Wiktionary API (translate_wiki function) and compare the results.
-
-    :param word: The Greek word to translate
-    :type word: str
-    :return: The English translation of the given Greek word, or None if the translation fails
-    :rtype: str | None
-    """
-    try:
-        return w2w(word)
-    except Exception as e:
-        # print(f"Error translating word '{word}': {e}")
-        return None
 
 
 def translate_wiki(word) -> list[str] | None:
@@ -65,7 +46,7 @@ def retrieve_definitions(word_definitions) -> list[str]:
                 d = d[:start] + d[end + 1 :]
             else:
                 break
-        definitions.append(d.replace("\n", "; ").strip())
+        definitions.append(d.replace("\n", "").strip())
     return definitions
 
 
@@ -84,7 +65,7 @@ def parse_xmls() -> tuple[list[tuple[str, str]], dict[str, list]]:
     """
     Parse the XML files from the zip archive and extract the words and count their occurrences. Also, translate the words using the translate function.
 
-    :return: A tuple containing a list of (word, POS) tuples and a dictionary of word counts and translations
+    :return: A tuple containing a list of (word, POS) tuples and a dictionary of word counts
     :rtype: tuple[list[tuple[str, str]], dict[str, list]]
     """
     text_words = []  # all words from all documents, to be used for NLP analysis in the occurence order
@@ -108,7 +89,7 @@ def parse_xmls() -> tuple[list[tuple[str, str]], dict[str, list]]:
                                 if entry in found_words:
                                     found_words[entry][1] += 1
                                 else:
-                                    found_words[entry] = [POS, 1, translate(entry)]
+                                    found_words[entry] = [POS, 1]
                                 text_words.append((entry, POS))
                         elem.clear()
     return text_words, found_words
@@ -118,7 +99,7 @@ def create_word_graph(sorted_words, number_of_words, text_words) -> nx.Graph:
     """
     Create a graph with edges between neighbouring words in the text. Only the top `number_of_words` most frequent words are included as nodes in the graph.
 
-    :param sorted_words: A list of tuples containing words and their lists (POS, count, translation, etc.), sorted by count in descending order
+    :param sorted_words: A list of tuples containing words and their lists (POS, count, etc.), sorted by count in descending order
     :type sorted_words: list[tuple[str, list]]
     :param number_of_words: The number of most frequent words to include as nodes in the graph
     :type number_of_words: int
@@ -129,7 +110,7 @@ def create_word_graph(sorted_words, number_of_words, text_words) -> nx.Graph:
     """
     first_2000_words = sorted_words[:number_of_words]
     G = nx.Graph()
-    G.add_nodes_from([(word, POS) for word, (POS, _, _) in first_2000_words])
+    G.add_nodes_from([(word, POS) for word, (POS, _) in first_2000_words])
     for i in range(len(text_words) - 1):
         word1 = text_words[i]
         word2 = text_words[i + 1]
@@ -167,8 +148,7 @@ def main():
 
     # Create a list of tuples with word, count, rank and product of Zipf's law
     words_ranking = [
-        (word, count, rank, count * rank, POS, translation)
-        for rank, (word, (POS, count, translation)) in enumerate(sorted_by_count, start=1)
+        (word, count, rank, count * rank, POS) for rank, (word, (POS, count)) in enumerate(sorted_by_count, start=1)
     ]
     part_time = time.time()
     print(f"Time to create words ranking: {part_time - start_time:.2f} seconds")
@@ -177,21 +157,21 @@ def main():
     print("\n\nSorted by count - top 50 words with their Zipf's product:\n")
     write_output(FILENAME, "\n\nSorted by count - top 50 words with their Zipf's product:\n")
     i = 1
-    for word, count, rank, product, POS, translation in words_ranking:
+    for word, count, rank, product, POS in words_ranking:
         if i > 50:
             break
-        print(f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS}, translation: {translation})")
+        print(f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS})")
         write_output(
             FILENAME,
-            f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS}, translation: {translation})\n",
+            f"{i}. {word}: {count} (rank: {rank}, product: {product}, POS: {POS})\n",
         )
         i += 1
     part_time = time.time()
     print(f"Time to print top 50 words: {part_time - start_time:.2f} seconds")
 
     # Plot the Zipf's law graph for the top 2000 words
-    ranks = [rank for _, _, rank, _, _, _ in words_ranking[:2000]]
-    counts = [count for _, count, _, _, _, _ in words_ranking[:2000]]
+    ranks = [rank for _, _, rank, _, _ in words_ranking[:2000]]
+    counts = [count for _, count, _, _, _ in words_ranking[:2000]]
     plt.figure(figsize=(10, 6))
     plt.scatter(ranks, counts, alpha=0.5)
     plt.xscale("log")

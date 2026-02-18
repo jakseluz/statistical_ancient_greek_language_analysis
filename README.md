@@ -102,6 +102,9 @@ The corpus consists of texts from different areas, such as:
     
     As it appears, our corpus - although enormous (**over 10 million of words in total** - about 180 MB of data) - have more abstract words in its Swadesh list than the original Swadesh list. This can mean that the corpus is not easily understandable for an average speaker who knows only the language's core words.
 
+## Output (containing top 50 ranked words with their Zipf's product, top 200 words by a number of connections in the neighbouring words graph and the list of top 50 nouns with their meanings (mentioned just above in the 10th point)):
+[Output of the program](./word_ranking.txt)
+
 ## Project structure
 ```
 PROJECT STRUCTURE
@@ -112,7 +115,7 @@ PROJECT STRUCTURE
 ├── requirements.txt    -> modules required
 └── word_ranking.txt    -> current output for a brief visualisation
 ```
-[Output of the program](./word_ranking.txt)
+
 ## Usage
 [file with requirements](./requirements.txt)
 1. **Clone the repository:**
